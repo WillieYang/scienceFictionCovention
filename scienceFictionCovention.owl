@@ -38,6 +38,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasFilmScreen">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#Track"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#FilmScreening"/>
     </owl:ObjectProperty>
     
 
@@ -55,7 +57,9 @@
 
     <!-- http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasGuestOfHonour -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasGuestOfHonour"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasGuestOfHonour">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#GuestOfHonour"/>
+    </owl:ObjectProperty>
     
 
 
@@ -223,7 +227,25 @@
     <!-- http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#AcademicTrack -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#AcademicTrack">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#Track"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#Track"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasBuildingNumber"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#Building-1"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasFloorNumber"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#Floor-1"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasRoomNumber"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#Room-1"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -347,14 +369,57 @@
     <!-- http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#MusicTrack -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#MusicTrack">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#Track"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#Track"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasBuildingNumber"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#Building-1"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasFloorNumber"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#Floor-1"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasRoomNumber"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#Room-2"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#PanelSession -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#PanelSession"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#PanelSession">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasParticipant"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#FemaleParticipant"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#MaleParticipant"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasModerate"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#Participant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -410,6 +475,12 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasProgrammeLastTime"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasScheduledOn"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
@@ -420,7 +491,21 @@
 
     <!-- http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#Reading -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#Reading"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#Reading">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasGuestOfHonour"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#GuestOfHonour"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasParticipant"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#Participant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -462,24 +547,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasProgrammeItem"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#ProgrammeItem"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasBuildingNumber"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#Building"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasFloorNumber"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#Floor"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasRoomNumber"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#Room"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
