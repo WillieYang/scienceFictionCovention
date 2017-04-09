@@ -268,13 +268,6 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#AcademicPanelSessionParticipant"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasModerate"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#AcademicPanelSessionParticipant"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -707,13 +700,6 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasModerate"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#MusicPanelSessionParticipant"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -914,13 +900,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasParticipant"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#PoliticsPanelSessionParticipant"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasModerate"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#PoliticsPanelSessionParticipant"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1127,13 +1106,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasParticipant"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#SciencePanelSessionParticipant"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#hasModerate"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yangontologies/scienceFicitonConvention#SciencePanelSessionParticipant"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
