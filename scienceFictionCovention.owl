@@ -1342,6 +1342,17 @@
     
 
 
+    <!-- http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Play-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Play-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#AcademicPlay"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-10"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-11"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-9"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#PoliticsTrack-1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#PoliticsTrack-1">
@@ -1356,6 +1367,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Programme-1">
         <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#AcademicProgrammeItem"/>
+        <hasPanelSession rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#pannel-1"/>
+        <hasPlay rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Play-1"/>
+        <hasReading rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Reading-2"/>
         <hasProgrammeLastTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</hasProgrammeLastTime>
         <hasScheduledOn rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-10-29T16:32:52+00:00</hasScheduledOn>
     </owl:NamedIndividual>
@@ -1397,6 +1411,9 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Reading-2">
         <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#AcademicReading"/>
         <hasGuestOfHonour rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Guest-3"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-3"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-4"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-5"/>
     </owl:NamedIndividual>
     
 
@@ -1446,6 +1463,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#pannel-1">
         <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#AcademicPanelSession"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-6"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-7"/>
+        <hasParticipant rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-8"/>
     </owl:NamedIndividual>
     
 
@@ -1475,10 +1495,91 @@
     
 
 
+    <!-- http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#AcademicPlayParticipant"/>
+        <hasGender rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Male"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#AcademicPlayParticipant"/>
+        <hasGender rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Male"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-2 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-2">
         <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#MusicPanelSessionParticipant"/>
+        <hasGender rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Female"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#AcademicReadingParticipant"/>
+        <hasGender rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Female"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#AcademicReadingParticipant"/>
+        <hasGender rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Male"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#AcademicReadingParticipant"/>
+        <hasGender rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Female"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#AcademicPanelSessionParticipant"/>
+        <hasGender rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Male"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#AcademicPanelSessionParticipant"/>
+        <hasGender rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Male"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#AcademicPanelSessionParticipant"/>
+        <hasGender rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Female"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#partic-9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#AcademicPlayParticipant"/>
         <hasGender rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Female"/>
     </owl:NamedIndividual>
     
