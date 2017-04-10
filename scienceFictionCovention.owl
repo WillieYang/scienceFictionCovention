@@ -1268,6 +1268,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Charles_Stross -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Charles_Stross">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#GuestOfHonour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#David_Clements -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#David_Clements">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#GuestOfHonour"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Female -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Female">
@@ -1380,6 +1396,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Programme-2">
         <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#PoliticsProgrammeItem"/>
+        <hasReading rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Reading-3"/>
         <hasProgrammeLastTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</hasProgrammeLastTime>
         <hasScheduledOn rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-10-26T16:32:52+00:00</hasScheduledOn>
     </owl:NamedIndividual>
@@ -1390,6 +1407,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Programme-3">
         <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#PoliticsProgrammeItem"/>
+        <hasReading rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Reading-4"/>
         <hasProgrammeLastTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</hasProgrammeLastTime>
         <hasScheduledOn rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-10-20T17:32:52+00:00</hasScheduledOn>
     </owl:NamedIndividual>
@@ -1431,6 +1449,18 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Reading-3">
         <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#PoliticsReading"/>
+        <hasGuestOfHonour rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Charles_Stross"/>
+        <hasGuestOfHonour rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#David_Clements"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Reading-4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Reading-4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#PoliticsReading"/>
+        <hasGuestOfHonour rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Charles_Stross"/>
+        <hasGuestOfHonour rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#David_Clements"/>
     </owl:NamedIndividual>
     
 
