@@ -1,0 +1,86 @@
+1. Where are the film screenings that are scheduled on Saturday 15th August 2014?
+
+	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+	PREFIX owl: <http://www.w3.org/2002/07/owl#>
+	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+	PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+	PREFIX sfc: <http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#>
+	SELECT DISTINCT ?FilmScreening ?Building ?Floor ?Room ?ScheduledTime
+	WHERE { 
+	?FilmScreening sfc:hasScheduledOn ?ScheduledTime.
+	?FilmScreening sfc:hasBuildingNumber ?Building.
+	?FilmScreening sfc:hasFloorNumber ?Floor.
+	?FilmScreening sfc:hasRoomNumber ?Room.
+	FILTER( regex(?ScheduledTime, "2014-08-15"))
+	}
+
+2. Which program items feature both Charles Stross and David Clements?
+
+	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+	PREFIX owl: <http://www.w3.org/2002/07/owl#>
+	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+	PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+	PREFIX sfc: <http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#>
+	SELECT DISTINCT ?programmeItem ?guestOfHonour1 ?guestOfHonour2
+	WHERE { 
+	?track sfc:hasProgrammeItem ?programmeItem.
+	?programmeItem sfc:hasReading ?reading.
+	?Reading sfc:hasGuestOfHonour ?guestOfHonour1.
+	?Reading sfc:hasGuestOfHonour ?guestOfHonour2.
+	FILTER( regex(str(?guestOfHonour1), "Charles_Stross"))
+	FILTER( regex(str(?guestOfHonour2), "David_Clements"))
+	}
+
+3. Who are the moderators of the science track panel sessions?
+	
+	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+	PREFIX owl: <http://www.w3.org/2002/07/owl#>
+	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+	PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+	PREFIX sfc: <http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#>
+	SELECT ?SciencePanelSession ?ScienceTrackPanelSessionModerate
+	WHERE { 
+	?track a sfc:ScienceTrack.
+	?track sfc:hasProgrammeItem ?programmeItem.
+	?programmeItem sfc:hasPanelSession ?panelSession.
+	?SciencePanelSession sfc:hasModerate ?ScienceTrackPanelSessionModerate.
+	} 
+	
+4. How many people are participating in the academic track.
+	
+	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+	PREFIX owl: <http://www.w3.org/2002/07/owl#>
+	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+	PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+	PREFIX sfc: <http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#>
+	SELECT (count(distinct (?participantR)) as ?AcademicReadingParticipant)
+	            (count(distinct (?participantS)) as ?AcademicPanelSessionParticipant)
+	            (count(distinct (?participantP)) as ?AcademicPlayParticipant)
+	WHERE { 
+	?track a sfc:AcademicTrack.
+	?track sfc:hasProgrammeItem ?programmeItem.
+	?programmeItem sfc:hasReading ?reading.
+	?programmeItem sfc:hasPanelSession ?panelSession.
+	?programmeItem sfc:hasPlay ?play.
+	?reading sfc:hasParticipant ?participantR.
+	?panelSession sfc:hasParticipant ?participantS.
+	?play sfc:hasParticipant ?participantP.
+} 
+
+5. What is the earliest program item in the politics track?
+
+		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+		PREFIX owl: <http://www.w3.org/2002/07/owl#>
+		PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+		PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+		PREFIX sfc: <http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#>
+		SELECT  ?track ?programmeItem ?lastTime ?scheduledTime
+		WHERE { 
+		?track a sfc:PoliticsTrack.
+		?track sfc:hasProgrammeItem ?programmeItem.
+		?programmeItem sfc:hasScheduledOn ?scheduledTime.
+		?programmeItem sfc:hasProgrammeLastTime ?lastTime.
+		}
+		ORDER BY ASC(?scheduledTime)
+		LIMIT 1
+
