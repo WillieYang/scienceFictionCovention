@@ -522,12 +522,6 @@
                 <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Room"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#hasScheduledOn"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
