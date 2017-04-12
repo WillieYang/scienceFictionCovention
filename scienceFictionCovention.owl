@@ -1270,6 +1270,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Convention-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Convention-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Convention"/>
+        <hasTrack rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#PoliticsTrack-1"/>
+        <hasTrack rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#ScienceTrack-1"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#David_Clements -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#David_Clements">
