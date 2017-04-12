@@ -8,7 +8,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention">
-        <rdfs:comment>A science fiction convention ontology that describe various science fiction conventions based on their sessions, people and location.</rdfs:comment>
+        <rdfs:comment>A science fiction convention ontology that describe various conventions based on their sessions and associated people.</rdfs:comment>
     </owl:Ontology>
     
 
@@ -254,6 +254,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#PoliticsTrack"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>The film screenings in this class can be parted for Academic and Politics track.</rdfs:comment>
     </owl:Class>
     
 
@@ -324,7 +325,41 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#AcademicReading"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>This class is about the ProgrammeItems in the Academic Track.</rdfs:comment>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#AcademicProgrammeItem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#hasReading"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#AcademicReading"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>As for each Academic ProgrammeItem, it would have one for more Academic Readings.</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#AcademicProgrammeItem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#hasPanelSession"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#AcademicPanelSession"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>As for each Academic ProgrammeItem, it would have one for more Academic PanelSessions.</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#AcademicProgrammeItem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#hasPlay"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#AcademicPlay"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>As for each Academic ProgrammeItem, it would have one for more Academic Plays.</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -400,6 +435,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#AcademicProgrammeItem"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>This kind of track is for Academics, and it can have one for more academic Screenings or ProgrammeItems.</rdfs:comment>
     </owl:Class>
     
 
@@ -408,6 +444,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#AcademicTrackFilmScreening">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#NamedFilmScreening"/>
+        <rdfs:comment>This class contains the films screen which is only for Academic Track.</rdfs:comment>
     </owl:Class>
     
 
@@ -488,7 +525,22 @@
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment>This class contains individuals of three different buildings.</rdfs:comment>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Building"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Building-1"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Building-2"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Building-3"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:annotatedTarget>
+        <rdfs:comment>In this class, there are only three buildings for holding the convention.</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -502,7 +554,19 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Track"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>This is a class for various conventions, and for each convention it can have one or more tracks.</rdfs:comment>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Convention"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#hasTrack"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Track"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>One convention on have one or more different kind of tracks.</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -510,6 +574,12 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#FilmScreening">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#hasBuildingNumber"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Building"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#hasFloorNumber"/>
@@ -522,7 +592,41 @@
                 <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Room"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>This is a class about various FilmScreenings, in this class, FilmScreenings have been classfied which can be used for single track as well as multitrack.</rdfs:comment>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#FilmScreening"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#hasBuildingNumber"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Building"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>As for property of hasBulidingNumber, it is only for FilmScreen and corresponding Building.</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#FilmScreening"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#hasFloorNumber"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Floor"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>As for property of hasFloorNumber, it is only for FilmScreen and corresponding Floor.</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#FilmScreening"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#hasRoomNumber"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Room"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>As for property of hasRoomNumber, it is only for FilmScreen and corresponding Room.</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -538,7 +642,22 @@
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment>This class contains individuals of three different floors.</rdfs:comment>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Floor"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Floor-1"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Floor-2"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Floor-3"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:annotatedTarget>
+        <rdfs:comment>Each building has only three floor.</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -553,6 +672,7 @@
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment>This class contains two individuals to tell the gender of participants in this ontology.</rdfs:comment>
     </owl:Class>
     
 
@@ -597,6 +717,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment>This is a defined class in which the duration time of ProgrammeItems is longer than 90 minutes.</rdfs:comment>
     </owl:Class>
     
 
@@ -616,7 +737,25 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment>This is a defined class in which film screen can be part more than one track.</rdfs:comment>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#MultiTrackFilmScreening"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#FilmScreening"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#isFilmScreenOf"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Track"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:annotatedTarget>
+        <rdfs:comment>The MultiTrackFilmScreening can be parted for two or more different kind of tracks.</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -636,6 +775,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#ScienceTrack"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>The film screenings in this class can be parted for Music and Science track.</rdfs:comment>
     </owl:Class>
     
 
@@ -726,7 +866,30 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#MusicPlay"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>This class is about the ProgrammeItems in the Music Track.</rdfs:comment>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#MusicProgrammeItem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#hasPanelSession"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#MusicPanelSession"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>As for each Music ProgrammeItem, it would have one for more Music PanelSessions.</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#MusicProgrammeItem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#hasPlay"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#MusicPlay"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>As for each Music ProgrammeItem, it would have one for more Music Plays.</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -766,6 +929,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#MusicProgrammeItem"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>This is a Music track, and it can have one for more Music Screenings or ProgrammeItems.</rdfs:comment>
     </owl:Class>
     
 
@@ -774,6 +938,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#MusicTrackFilmScreening">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#NamedFilmScreening"/>
+        <rdfs:comment>This class contains the films screen which is only for Music Track.</rdfs:comment>
     </owl:Class>
     
 
@@ -916,7 +1081,41 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#PoliticsReading"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>This class is about the ProgrammeItems in the Politic Track.</rdfs:comment>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#PoliticsProgrammeItem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#hasPlay"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#PoliticsPlay"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>As for each Politic ProgrammeItem, it would have one for more Politic Plays.</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#PoliticsProgrammeItem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#hasReading"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#PoliticsReading"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>As for each Politic ProgrammeItem, it would have one for more Politic Readings.</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#PoliticsProgrammeItem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#hasPanelSession"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#PoliticsPanelSession"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>As for each Politic ProgrammeItem, it would have one for more Politic PanelSessions.</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -992,6 +1191,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#PoliticsProgrammeItem"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>This is a Politics track, and it can have one for more Politcs Screenings or ProgrammeItems.</rdfs:comment>
     </owl:Class>
     
 
@@ -1000,6 +1200,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#PoliticsTrackFilmScreening">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#NamedFilmScreening"/>
+        <rdfs:comment>This class contains the films screen which is only for Politics Track.</rdfs:comment>
     </owl:Class>
     
 
@@ -1020,7 +1221,30 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>There are four different kind of ProgrammeItems which are Academic, Music, Politics and Science respectively which is used for different kind of tracks. In addition, as for a ProgrammeItem, it has three diverse activities, which are Reading, PanelSession and Play.</rdfs:comment>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#ProgrammeItem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#hasProgrammeLastTime"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>This property is about the relationship between a ProgrammeItem and its time of duration.</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#ProgrammeItem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#hasScheduledOn"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>Thsi property is about the relationship between ProgrammeItem and its ScheduledTime.</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -1052,7 +1276,22 @@
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment>This class contains individuals of three different rooms.</rdfs:comment>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Room"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Room-1"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Room-2"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Room-3"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:annotatedTarget>
+        <rdfs:comment>Each floor has only three rooms.</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -1122,7 +1361,41 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#ScienceReading"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>This class is about the ProgrammeItems in the Science Track.</rdfs:comment>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#ScienceProgrammeItem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#hasPanelSession"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#SciencePanelSession"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>As for each Science ProgrammeItem, it would have one for more Science PanelSessions.</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#ScienceProgrammeItem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#hasPlay"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#SciencePlay"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>As for each Science ProgrammeItem, it would have one for more Science Plays.</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#ScienceProgrammeItem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#hasReading"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#ScienceReading"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>As for each Science ProgrammeItem, it would have one for more Science Readings.</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -1198,6 +1471,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#ScienceProgrammeItem"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>This is a Science track, and it can have one for more Science Screenings or ProgrammeItems.</rdfs:comment>
     </owl:Class>
     
 
@@ -1206,6 +1480,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#ScienceTrackFilmScreening">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#NamedFilmScreening"/>
+        <rdfs:comment>This class contains the films screen which is only for Science Track.</rdfs:comment>
     </owl:Class>
     
 
@@ -1214,6 +1489,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Track">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>There are four different kind of tracks which are Academic, Music, Politics and Science respectively.</rdfs:comment>
     </owl:Class>
     
 
@@ -1336,6 +1612,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#FilmScreening_4">
         <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#AcademicAndPoliticsFilmScreening"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#MultiTrackFilmScreening"/>
         <hasBuildingNumber rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Building-1"/>
         <hasFloorNumber rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Floor-2"/>
         <hasRoomNumber rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Room-3"/>
@@ -1800,6 +2077,7 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#PoliticsTrack"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#ScienceTrack"/>
         </owl:members>
+        <rdfs:comment>These four different kinds of tracks are disjoint with each other.</rdfs:comment>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
@@ -1808,6 +2086,22 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#MusicTrackFilmScreening"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#PoliticsTrackFilmScreening"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#ScienceTrackFilmScreening"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#hasPanelSession"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#hasPlay"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#hasReading"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#isPanelSessionOf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#isPlayOf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#isReadingOf"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
