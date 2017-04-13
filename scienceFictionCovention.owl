@@ -229,6 +229,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#hasProgrammeLastTime">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment>This property illustrates the relationship between ProgrammeItem and its dureation of time.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -237,6 +238,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#hasScheduledOn">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment>This property illustrates the relationship between ProgrammeItem and its scheduledTime, as well as the filmScreening and its scheduledTime.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1724,6 +1726,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Floor-1">
         <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Floor"/>
+        <rdfs:comment>This is a instance of a specific Floor Number.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1732,6 +1735,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Floor-2">
         <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Floor"/>
+        <rdfs:comment>This is a instance of a specific Floor Number.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1740,6 +1744,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Floor-3">
         <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Floor"/>
+        <rdfs:comment>This is a instance of a specific Floor Number.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1891,6 +1896,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Room-1">
         <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Room"/>
+        <rdfs:comment>This is a instance of a specific Room Number.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1899,6 +1905,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Room-2">
         <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Room"/>
+        <rdfs:comment>This is a instance of a specific Room Number.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1907,6 +1914,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Room-3">
         <rdf:type rdf:resource="http://www.semanticweb.org/sy3g16/Sheng-Yang/ontologies/scienceFicitonConvention#Room"/>
+        <rdfs:comment>This is a instance of a specific Room Number.</rdfs:comment>
     </owl:NamedIndividual>
     
 
